@@ -19,3 +19,19 @@ class Reviews:
         for get in results:
             get_review.append (cls (get))
         return get_review
+
+    def add_review(cls, data):
+        query = """
+        INSERT INTO reviews (review, user_id)
+        VALUES ( %(review)s, %(user_id)s);
+        """
+        results = connectToMySQL(db).query_db(query, data)
+        return results
+
+    def update_reviews(cls, data, id):
+        query = """
+        UPDATE reviews SET review = %(review)s, updated_at = NOW() WHERE id = {id};
+        """
+        results = connectToMySQL(db).query_db(query, data)
+        return results
+
