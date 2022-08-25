@@ -24,7 +24,6 @@
             padding: 1rem;
         }
         .view_items {
-            margin-left: -13rem;
             height: 350px;
             display: flex;
             align-items: center;
@@ -32,11 +31,10 @@
             justify-content: space-between;
         }
         .item_customize {
-            margin-left: 43.5rem;
+            margin-left: 29.5rem;
             width: 21%;
             border: outset;
             height: 100%;
-            margin-top: -88px;
         }
         .bottom_nav {
             background-color: darkgrey;
@@ -63,7 +61,7 @@
             <p> Checkout </p>
         </div>
         <br> 
-        <div class="view_item">
+        <div class="view_items">
             <p> Img </p>
             <p> Description of Item </p>
             <div class="item_customize">
@@ -71,13 +69,19 @@
             </div>
         </div>
         <br>
-        <div class="add_review">
+        <div class="review">
             <form action="" method="post">
                 <div class="form-group">
                     <label for="add_review"> Add Review </label>
                     <input type="text" name="cust_rev">
                     <button type="submit" value="Add!"> </button>
                     <p> Rating out of 5 </p>
+                </div>
+                <br>
+                
+                <div class="form-group">
+                    <label for="reviews"> Reviews </label>
+                    <p> </p>
                 </div>
             </form>
         </div>
