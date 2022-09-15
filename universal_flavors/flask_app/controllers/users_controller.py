@@ -9,3 +9,7 @@ def index():
 @app.route('/view_item')
 def view_items():
     return render_template('view_item.html')
+
+@app.route('/login_and_reg')
+def login_and_reg():
+    return render_template('login_and_reg.html')
