@@ -31,16 +31,29 @@
         }
         .recently_added_items {
             display: flex;
-            height: 171px;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 75%;
+            height: 100%;
+            flex-direction: column;
+            width: 100%;
         }
-        .item_list {
+        .item_desc {
             border: black solid 3px;
+            display: flex;
+            align-items: center;
+            height: 130px;
+            width: 35%;
+            margin-left: 12%;
+        }
+        img {
+            width:33%;
+            height: 40%;
+            margin-left: 8%;
+        }
+        .product_view{
+            background-color: seashell;
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -59,9 +72,17 @@
         </div>
         <br>
         <div class="recently_added_items">
-            <p class="item_list"> Item one here </p>
-            <p class="item_list"> Item two here </p>
-            <p class="item_list"> Item three here </p>
+            <div class="product_view">
+                <img src="{{ url_for('static', filename='/imgs/hand_mold.jpg') }}"> <p class="item_desc"> Here's a brief description of the product so you're inclined to click. </p>
+            </div>
+            <br>
+            <div class="product_view">
+                <p class="item_desc">Here's a brief description of the product so you're inclined to click.</p> <img src="{{ url_for('static', filename='/imgs/air_freshner.jpg') }}"> 
+            </div>
+            <br>
+            <div class="product_view"> 
+                <img src="{{ url_for('static', filename='/imgs/hand_mold.jpg') }}"> <p class="item_desc"> Item three here Here's a brief description of the product so you're inclined to click.</p>
+            </div>
         </div>
         <br>
         <div class="bottom_nav">
@@ -70,5 +91,6 @@
             <p> Contact </p>
         </div>
     </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

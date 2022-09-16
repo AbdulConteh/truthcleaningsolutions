@@ -13,3 +13,7 @@ def view_items():
 @app.route('/login_and_reg')
 def login_and_reg():
     return render_template('login_and_reg.html')
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
