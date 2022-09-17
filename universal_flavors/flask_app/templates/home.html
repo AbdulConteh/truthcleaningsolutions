@@ -14,13 +14,12 @@
         }
         .top-nav {
             width: 100%;
-            background-color: cornflowerblue;
             display: flex;
             height: 100px;
-            border: inset 5px black;
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
+            font-size: 25px;
         }
         .bottom_nav {
             width: 100%;
@@ -47,6 +46,7 @@
             width:33%;
             height: 40%;
             margin-left: 8%;
+            border-radius: 67px;
         }
         .product_view{
             background-color: seashell;
@@ -55,16 +55,20 @@
             align-items: center;
             justify-content: space-between;
         }
+        .search_bar {
+            width: 55%;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="top-nav">
-            <p> Home </p>
-            <p> Products </p>
-            <input type="search" value="search..." name="search_box">
-            <p> Sign In </p>
-            <p> Checkout </p>
+            <p><a href="/">Home</a></p>
+            <p><a href="shop.html">Shop</a> </p> 
+            <input type="search" value="search ..." class="search_bar"></input> 
+            <p><a href="/login_and_reg">Sign In</a> </p> 
+            <p><a href="checkout.html">Checkout</a> </p>
         </div>
         <br>
         <div>
