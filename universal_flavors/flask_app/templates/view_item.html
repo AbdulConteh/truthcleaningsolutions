@@ -12,16 +12,24 @@
             width: 1700px;
             height: 100%;
         }
-        .top-nav {
-            background-color: tan;
-            height:100px;
-            width:100%;
-            position: relative;
+        .top_nav {
+            width: 100%;
             display: flex;
-            flex-wrap: wrap;
+            height: 100px;
+            flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
+            justify-content: space-evenly;
+            font-size: 25px;
+        }
+        .search_bar {
+            width: 55%;
+            border-radius: 20px;
+        }
+        .bottom_nav {
+            width: 100%;
+            background-color: darkgray;
+            display: flex;
+            height: 150px;
         }
         .view_items {
             height: 350px;
@@ -36,11 +44,6 @@
             border: outset;
             height: 100%;
         }
-        .bottom_nav {
-            background-color: darkgrey;
-            height: 15%;
-            width: 100%
-        }
         .read_reviews {
             width: 100%;
             background-color: whitesmoke;
@@ -53,12 +56,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="top-nav">
-            <p> Home </p>
-            <p> Product </p>
-            <input type="search" value="search..." name="search_box">
-            <p><a href="/login_and_reg"> Sign In </a></p>
-            <p> Checkout </p>
+        <div class="top_nav">
+            <p><a href="/">Home</a></p>
+            <p><a href="/shop">Shop</a> </p> 
+            <input type="search" value="search ..." class="search_bar"></input> 
+            <p><a href="/login_and_reg">Sign In</a> </p> 
+            <p><a href="checkout.html">Checkout</a> </p>
         </div>
         <br> 
         <div class="view_items">

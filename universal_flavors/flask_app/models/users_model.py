@@ -31,10 +31,17 @@ class Users:
         results = connectToMySQL(db).query_db(query, data)
         return results
 
-    def edit_user(cls, data, id):
+    def edit_user(cls, data):
         query = """
         UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, address = %(address)s,
         updated_at = NOW() WHERE id = {id};
         """
         results = connectToMySQL(db).query_db(query, data)
         return results
+
+    def login(cls):
+        query = "SELECT * FROM email WHERE id = %(id)s"
+        results = connectToMySQL(db).query_db(query)
+        if len(results) < 1:
+            return False
+        return Users[results[0]]
