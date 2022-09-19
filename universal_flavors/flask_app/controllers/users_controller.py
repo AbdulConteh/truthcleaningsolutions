@@ -1,8 +1,8 @@
 from flask_app import app 
 from flask_bcrypt import Bcrypt
-from flask import flash
 from flask_app.models.users_model import Users
-from flask import redirect, render_template, request, session 
+from flask_app.models.reviews_model import Reviews
+from flask import redirect, render_template, request, session, flash
 bcrypt = Bcrypt(app)
 
 @app.route('/')
@@ -21,31 +21,38 @@ def login_and_reg():
 def shop():
     return render_template('shop.html')
 
-@app.route('/register', methods=['POST'])
-def register():
+@app.route("/register", methods=['POST'])
+def create():
+    if not Users.validate_users(request.form):
+        return redirect('/')
     data = {
-        "first_name" : request.form['first_name'],
-        "last_name" : request.form['last_name'],
-        "email" : request.form['email'],
-        "password" : request.form['password'],
+        "first_name" : request.form["first_name"],
+        "last_name" : request.form["last_name"],
+        "email" : request.form["email"],
+        "password" : bcrypt.generate_password_hash(request.form['password'])
     }
-    user = Users.add_user(data)
-    print(user)
-    session['user_id'] = user
-    return redirect('/', user = user)
+    # print(data['password'])
+    id = Users.add_user(data)
+    session['user_id'] = id
+    return redirect ('/')
 
-@app.route('/login', methods=['POST'])
+@app.route("/login", methods=['POST'])
 def login():
     data = {
-        "email" : request.form['email']
+        "email" : request.form["email"]
     }
-    get_user = Users.login(data)
-    print(get_user)
-    if not get_user:
-        flash("Unregistered email. Please try again!")
+    user = Users.login(data)
+    if not user:
+        flash("Unregistered email. Please try again", "login")
         return redirect('/')
-    if not bcrypt.check_password_hash(get_user.password, request.form['password']):
-        flash("Invalid password.")
+    if not bcrypt.check_password_hash(Users.password, request.form['password']):
+        flash("Invalid password.", "login")
         return redirect('/')
-    session['user_id'] = get_user.id
-    return redirect('/', get_user = get_user)
+    session['user_id'] = user.id
+    return redirect ('/profile')
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
