@@ -44,8 +44,8 @@ def login():
     user = Users.login(data)
     if not user:
         flash("Unregistered email. Please try again", "login")
-        return redirect('/')
-    if not bcrypt.check_password_hash(Users.password, request.form['password']):
+        return redirect('/login')
+    if not bcrypt.check_password_hash(user.password, request.form['password']):
         flash("Invalid password.", "login")
         return redirect('/')
     session['user_id'] = user.id

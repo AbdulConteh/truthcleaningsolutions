@@ -35,28 +35,15 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            height: 450px;
-            justify-content: space-between;
+            height: 100%;
+            justify-content: space-around;
+            font-size: 20px;
         }
         .register {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
+            width: 250px;
         }
         .login {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .btn {
-            border: black solid;
-            height: 42px;
-            width: 122px;
-            font-size: 23px;
-            background-color: blue;
-            padding: 2px;
+            width: 250px;
         }
     </style>
 </head>
@@ -72,6 +59,7 @@
         <div class="linebreak"></div>
         <br>
         <h2> Hello Jinja2 name </h2>
+        <br>
         <div class="login_and_register">
             <div class="register">
                 <h2> Register! </h2>
@@ -82,27 +70,39 @@
                     {% endfor %}
                 {% endif %}
                 {% endwith %}
-                <form action="/register" method="post" class="register" >
+                <form action="/register" method="post" class="b4-card-default" >
                     <div class="form-group">
-                        <label for="first_name"> First Name </label>
-                        <input type="text" name="first_name" id="first_name">
-                    <br>
-                        <label for="last_name"> Last Name </label>
-                        <input type="text" name="last_name" id="last_name">
-                    <br>
-                        <label for="address"> Address </label>
-                        <input type="text" name="address" id="address">
-                    <br>
-                        <label for="email"> Email</label>
-                        <input type="text" name="email" id="email">
-                    <br>
-                        <label for="password"> Password </label>
-                        <input type="text" name="password" id="password">
-                    <br>
-                        <label for="confirm_pw"> Confirm Password </label>
-                        <input type="text" name="confirm_pw" id="confirm_pw">
-                    <br>
-                    <input type="submit" value="Register" class="btn" >
+                        <div class="form-group">
+                            <label for="first_name"> First Name </label>
+                            <input type="text" name="first_name" id="first_name">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="last_name"> Last Name </label>
+                            <input type="text" name="last_name" id="last_name">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="email"> Email </label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="address"> Address </label>
+                            <input type="text" name="address" id="address">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="password"> Password </label>
+                            <input type="text" name="password" id="password">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="confirm_password"> Confirm Password </label>
+                            <input type="text" name="confirm_password" id="confirm_password">
+                        </div>
+                        <br>
+                        <input type="submit" value="Register" class="btn btn-primary" >
                     </div>
                 </form>
             </div>
@@ -115,7 +115,7 @@
                 {% endfor %}
             {% endif %}
             {% endwith %}
-                <form action="/login" method="POST" class="login">
+                <form action="/login" method="post" class="b4-card-default">
                     <h2> Login! </h2>
                     <div class="form-group">
                         <label for="email"> Email </label>
@@ -126,8 +126,9 @@
                         <label for="password"> Password </label>
                         <input type="text" name="password" id="password">
                     </div>
+                    <br>
                     <div class="form-group">
-                        <input type="submit" value="submit" class="btn">
+                        <input type="submit" value="submit" class="btn btn-primary">
                     </div>
                 </form>
             </div>

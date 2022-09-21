@@ -1,6 +1,5 @@
 import re 
 from flask import flash 
-from flask_app import app
 from flask_app.config.mysqlconnection import connectToMySQL
 db = "universal_flavors_db"
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
@@ -17,6 +16,14 @@ class Users:
         self.updated_at = data['updated_at']
 
     @classmethod
+    def add_user(cls, data):
+        query = """
+            INSERT INTO users (first_name, last_name, email, address, password)
+            VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(address)s, %(password)s);
+        """
+        results = connectToMySQL(db).query_db(query, data)
+        return results
+
     def get_users(cls):
         query = "SELECT * FROM users;"
         users = []
@@ -25,13 +32,6 @@ class Users:
             users.append(cls(user))
         return users
 
-    def add_user(cls, data):
-        query = """
-            INSERT INTO users (first_name, last_name, email, address, password)
-            VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(address)s, %(password)s);
-        """
-        results = connectToMySQL(db).query_db(query, data)
-        return results
 
     def edit_user(cls, data):
         query = """
@@ -42,11 +42,11 @@ class Users:
         return results
 
     def login(cls, data):
-        query = "SELECT * FROM email WHERE id = %(id)s"
+        query = "SELECT * FROM users WHERE email = %(email)s"
         results = connectToMySQL(db).query_db(query, data)
         if len(results) < 1:
             return False
-        return cls(results[0])
+        return Users(results[0])
 
     @staticmethod
     def validate_users(Users):

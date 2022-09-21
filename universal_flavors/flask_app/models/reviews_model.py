@@ -13,7 +13,7 @@ class Reviews:
 
     @classmethod 
     def get_reviews(cls):
-        query = "SELECT * FROM reviews WHERE id = %(id)s;"
+        query = "SELECT * FROM reviews;"
         results = connectToMySQL(db).query_db(query)
         get_review = []
         for get in results:
@@ -28,7 +28,7 @@ class Reviews:
         results = connectToMySQL(db).query_db(query, data)
         return results
 
-    def update_reviews(cls, data, id):
+    def update_reviews(cls, data):
         query = """
         UPDATE reviews SET review = %(review)s, updated_at = NOW() WHERE id = {id};
         """
