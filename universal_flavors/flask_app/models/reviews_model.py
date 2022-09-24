@@ -1,5 +1,4 @@
 import re 
-from flask import flash
 from flask_app.config.mysqlconnection import connectToMySQL
 db = "universal_flavors_db"
 

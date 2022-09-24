@@ -18,8 +18,8 @@ class Users:
     @classmethod
     def add_user(cls, data):
         query = """
-            INSERT INTO users (first_name, last_name, email, address, password)
-            VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(address)s, %(password)s);
+            INSERT INTO users (first_name, last_name, email, password)
+            VALUES ( %(first_name)s, %(last_name)s, %(email)s, %(password)s);
         """
         results = connectToMySQL(db).query_db(query, data)
         return results
@@ -31,7 +31,6 @@ class Users:
         for user in result:
             users.append(cls(user))
         return users
-
 
     def edit_user(cls, data):
         query = """

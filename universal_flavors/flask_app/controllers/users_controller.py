@@ -17,7 +17,7 @@ def view_items():
 def login_and_reg():
     return render_template('login_and_reg.html')
 
-@app.route('/shop')
+@app.route('/view_item')
 def shop():
     return render_template('shop.html')
 
@@ -44,8 +44,8 @@ def login():
     user = Users.login(data)
     if not user:
         flash("Unregistered email. Please try again", "login")
-        return redirect('/login')
-    if not bcrypt.check_password_hash(user.password, request.form['password']):
+        return redirect('/')
+    if not bcrypt.check_password_hash(user.password , request.form['password']):
         flash("Invalid password.", "login")
         return redirect('/')
     session['user_id'] = user.id
