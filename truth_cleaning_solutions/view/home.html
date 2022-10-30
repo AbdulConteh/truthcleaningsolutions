@@ -8,28 +8,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
         .container {
-            width: 100%;
-            height: 900px;
+            width: 1800px;
+            height: 100%;
+            background-color: whitesmoke;
         }
         .top_navbar {
             background-color: aliceblue;
             display: flex;
             width: 100%;
-            height: 10%;
+            height: 14%;
             flex-direction: row;
-            align-items: flex-end;
+            align-items: center;
             justify-content: space-between;
             font-size: 22px;
             margin-top: 15px;
+            padding: 10px;
             border: outset 5px;
         }
         .home_body {
-            width: 80%;
-            height: 100%;
+            width: 90%;
+            height: 1000px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left: 9rem;
+            margin-left: 4rem;
+            background-color: orchid;
+            border: black solid 2px;
         }
         table {
             display: flex;
@@ -47,14 +51,28 @@
             border: black solid 3px;
         }
         ul {
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            background-color: cyan;
+            align-items: center;
+            background-color: whitesmoke;
             justify-content: space-between;
         }
+        li:hover {background-color: orange;}
         li {
             list-style: none;
+            height: 330px;
+            width: 43%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 40px;
+            align-items: center;
+        }
+        .services-tab {
+            width: 75%;
+            height: 950px;
         }
     </style>
     <title>Home</title>
@@ -62,11 +80,8 @@
 <body>
     <div class="container">
         <div class="top_navbar">
-            <p>Logo </p>
-            <p> Home </p>
-            <p> Services We Offer </p>
-            <p> How We Clean </p>
-            <p> (585) 434 - 8543 </p>
+            <img src="imgs/logo.jpg" alt="logo" style="width:150px; height: 100px;">
+            <p> Home | Services We Offer | How We Clean | (585) 434 - 8543 </p>
         </div>
         <br>
         <h1> The Truth Cleaning Solutions </h1>
@@ -75,50 +90,52 @@
         </p>
         <br>
         <div class="home_body">
+        <div class="services-tab">
             <ul>
                 <li> 
                     <a href="\our_services.html">
+                        <img src="imgs/mop.jpg" alt="mop" style="width: 270px; height: max-content;">
+                        <br>
                         <strong> One Time Cleaning </strong>
-                        <img src="truth_cleaning_services\view\imgs\mop.jpg" alt="mop"> 
-                        
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
+                        <img src="imgs/light-clean.jpg" alt="light_clean" style="width: 270px; height: 180px;">
+                        <br>
                         <strong> Light Cleaning </strong>
-                        <img src="truth_cleaning_services\view\imgs\mop.jpg" alt="mop">
-                        
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
+                        <img src="imgs/dusting.jpg" alt="dusitng" style="width: 270px; height: 180px;">
+                        <br>
                         <strong> Deep Cleaning </strong>
-                        <img src="truth_cleaning_services\view\imgs\mop.jpg" alt="mop">
-                        
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
+                        <img src="imgs/kitchen_clean.jpg" alt="kitchen_clean" style="width: 270px; height: max-content;">
+                        <br>
                         <strong> Kitchen Appliance Cleaning </strong>
-                        <img src="\mop.jpg" alt="mop">
-                        
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
+                        <img src="imgs/move_out.jpg" alt="moving_clean" style="width: 270px; height: max-content;">
+                        <br>
                         <strong> Move In / Move Out Cleaning </strong>
-                        <img src="truth_cleaning_services\view\imgs\mop.jpg" alt="mop">
-                        
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
+                        <img src="imgs/renovation.jpg" alt="renovation_clean" style="width: 270px; height: max-content;">
+                        <br>
                         <strong> Renovation Cleaning </strong>
-                        <img src="truth_cleaning_services\view\imgs\mop.jpg" alt="mop">
-                        
                     </a>
                 </li>
             </ul>
+        </div>
         </div>
         <br>
         <div class="bottom_navbar">
