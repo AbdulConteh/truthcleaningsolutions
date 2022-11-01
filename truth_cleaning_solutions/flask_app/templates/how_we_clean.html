@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <title>How We Clean</title>
     <style>
         .container {
             width: 1800px;
@@ -34,23 +34,16 @@
 <body>
     <div class="container">
         <div class="top_navbar">
-            <img src="imgs/logo.jpg" alt="logo" style="width:150px; height: 100px;">
-            <p> Home | Services We Offer | How We Clean | (585) 434 - 8543 </p>
+            <img src="{{ url_for('static', filename='/imgs/logo.jpg') }}" alt="logo" style="width:150px; height: 100px;">
+            <p> <a href="/home"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
         </div>
         <br>
-        <div class="services">
-            <p>One Time Clean</p>
-            <p> Light Clean</p>
-            <p> Deep Clean </p>
-            <p> Kitchen Appliances </p>
-            <p> Renovation Clean </p>
-            <p> Move In / Out </p>
-            <p> Property Cleanup </p>
-            <p> Carpet </p>
+        <div class="body_info">
+            <h2> How We Clean </h2>
         </div>
         <br>
         <div class="bottom_nav">
-            <p> Instagram | Facebook | Number </p>
+            <p> Instagram | Facebook | Contact </p>
         </div>
     </div>
 </body>
