@@ -29,24 +29,59 @@
             width: 100%;
             border: black solid 3px;
         }
+        .services {
+            position: relative;
+            display: inline-block;
+        }
+        .services_dropdown {
+            display: none;
+            position: absolute;
+            background-color: darkcyan;
+            width: 80%;
+            box-shadow: 5px 8px 8px 5px;
+            margin: 10px;
+        }
+        .services:hover .services_dropdown {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="top_navbar">
             <img src="{{ url_for('static', filename='/imgs/logo.jpg') }}" alt="logo" style="width:150px; height: 100px;">
-            <p> <a href="/home"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
+            <p> <a href="/"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
         </div>
         <br>
         <div class="services">
-            <p>One Time Clean</p>
-            <p> Light Clean</p>
-            <p> Deep Clean </p>
-            <p> Kitchen Appliances </p>
-            <p> Renovation Clean </p>
-            <p> Move In / Out </p>
-            <p> Property Cleanup </p>
-            <p> Carpet </p>
+            <ul> One Time Clean 
+                <li>
+                    <ul class="services_dropdown">
+                        <li>
+                            <h2> One Time Clean </h2>
+                            <p> 
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul> Light Clean
+                <li>
+                    <ul class="services_dropdown">
+                        <li>
+                            <h2> Light Clean </h2>
+                            <p> 
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <br>
         <div class="bottom_nav">

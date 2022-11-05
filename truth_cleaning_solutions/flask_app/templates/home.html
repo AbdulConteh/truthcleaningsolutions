@@ -75,12 +75,13 @@
             height: 950px;
         }
     </style>
-    <title>Homer Simpson</title>
+    <title>Home</title>
 </head>
 <body>
     <div class="container">
+        <div class="top_navbar">
             <img src="{{ url_for('static', filename='/imgs/logo.jpg') }}" alt="logo" style="width:150px; height: 100px;">
-            <p> <a href="/home"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
+            <p> <a href="/"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
         </div>
         <br>
         <h1> The Truth Cleaning Solutions </h1>
@@ -93,42 +94,42 @@
             <ul>
                 <li> 
                     <a href="\our_services.html">
-                        <img src="imgs/mop.jpg" alt="mop" style="width: 270px; height: max-content;">
+                        <img src="{{ url_for('static', filename='/imgs/mop.jpg') }}" alt="mop" style="width: 270px; height: max-content;">
                         <br>
                         <strong> One Time Cleaning </strong>
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
-                        <img src="imgs/light-clean.jpg" alt="light_clean" style="width: 270px; height: 180px;">
+                        <img src="{{ url_for('static', filename='/imgs/light-clean.jpg') }}" alt="light_clean" style="width: 270px; height: 180px;">
                         <br>
                         <strong> Light Cleaning </strong>
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
-                        <img src="imgs/dusting.jpg" alt="dusitng" style="width: 270px; height: 180px;">
+                        <img src="{{ url_for('static', filename='/imgs/dusting.jpg') }}" alt="dusitng" style="width: 270px; height: 200px;">
                         <br>
                         <strong> Deep Cleaning </strong>
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
-                        <img src="{{ url_for('static', filename='/static/imgs/kitchen_clean.jpg') }}" alt="kitchen_clean" style="width: 270px; height: max-content;">
+                        <img src="{{ url_for('static', filename='/imgs/kitchen_clean.jpg') }}" alt="kitchen_clean" style="width: 270px; height: max-content;">
                         <br>
                         <strong> Kitchen Appliance Cleaning </strong>
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
-                        <img src="imgs/move_out.jpg" alt="moving_clean" style="width: 270px; height: max-content;">
+                        <img src="{{ url_for('static', filename='/imgs/move_out.jpg') }}" alt="moving_clean" style="width: 270px; height: max-content;">
                         <br>
                         <strong> Move In / Move Out Cleaning </strong>
                     </a>
                 </li>
                 <li> 
                     <a href="truth_cleaning_services\view\our_services.html">
-                        <img src="imgs/renovation.jpg" alt="renovation_clean" style="width: 270px; height: max-content;">
+                        <img src="{{ url_for('static', filename='/imgs/renovation.jpg') }}" alt="renovation_clean" style="width: 270px; height: max-content;">
                         <br>
                         <strong> Renovation Cleaning </strong>
                     </a>
