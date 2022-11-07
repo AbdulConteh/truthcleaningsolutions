@@ -8,7 +8,8 @@
     <style>
         .container {
             width: 1800px;
-            height: 100%;
+            height: 920px;
+            margin-left: 7rem;
             background-color: whitesmoke;
         }
         .top_navbar {
@@ -28,21 +29,60 @@
             height: 15%;
             width: 100%;
             border: black solid 3px;
+            margin-top: 25rem;
+        }
+        .services_navbar {
+            height: 20%;
+            background-color: whitesmoke; 
+            display:flex;
         }
         .services {
             position: relative;
-            display: inline-block;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .services_dropdown {
             display: none;
-            position: absolute;
-            background-color: darkcyan;
-            width: 80%;
             box-shadow: 5px 8px 8px 5px;
-            margin: 10px;
+            flex-direction: column;
+            width: 50%;
+        }
+        ul {
+            flex-direction: column;
+        }
+        li {
+            height: max-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-style: italic;
+            font-size: 18px;
         }
         .services:hover .services_dropdown {
             display: block;
+        }
+        .services:hover .services_detail {
+            display: block;
+        }
+        button {
+            border: none;
+            background-color: darkcyan;
+            font-size: 23px;
+            border-radius: 50px;
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .services_detail {
+            display: none;
+            height: 600px;
+            width: 1111px;
+            margin: 10px;
+            box-shadow: -5px 5px 5px 5px rebeccapurple;
         }
     </style>
 </head>
@@ -53,38 +93,98 @@
             <p> <a href="/"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| (585) 434 - 8543 </p>
         </div>
         <br>
-        <div class="services">
-            <ul> One Time Clean 
-                <li>
-                    <ul class="services_dropdown">
-                        <li>
-                            <h2> One Time Clean </h2>
-                            <p> 
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            </p>
-                        </li>
+        <div class="services_navbar">
+            <div class="services">
+                <button type="button" class="btn btn-primary"><a href=""> One Time Clean </a></button>
+                <div class="services_detail">
+                    <h2> One Time Clean </h2>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <br>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                </div>
+            </div>
+            <div class="services">
+                <button type="button" class="btn btn-primary"><a href=""> Deep Clean </a></button>
+                <div class="services_detail">
+                    <h2> Deep Clean </h2>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <br>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                </div>
+            </div>
+            <div class="services">
+                <button type="button" class="btn btn-primary"><a href=""> Restoration </a></button>
+                <div class="services_detail">
+                    <h2> Restoration Clean </h2>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <br>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                </div>
+            </div>
+            <div class="services">
+                <button type="button" class="btn btn-primary"><a href=""> Light Clean </a></button>
+                <div class="services_detail">
+                    <h2> Light Clean </h2>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                    <br>
+                    <p> 
+                        How fast can I type I don't know you tell me I wonder if I
+                        always have to look at the keyboard if I want to type fast.
+                    </p>
+                </div>
+            </div>
+            <div class="services">
+                <button type="button" class="btn btn-primary"><a href=""> Specialty Cleans </a></button>
+                <div class="services_dropdown">
+                    <ul>
+                        <li><a href="#"> Kitchen / Stove </a></li>
+                        <li><a href="#"> Move In / Out </a></li>
+                        <li><a href="#"> Laundry Services </a></li>
+                        <li><a href="#"> Something Else </a></li>
+                        <li><a href="#"> AirBnb </a></li>
                     </ul>
-                </li>
-            </ul>
-            <ul> Light Clean
-                <li>
-                    <ul class="services_dropdown">
-                        <li>
-                            <h2> Light Clean </h2>
-                            <p> 
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            How much wood can a woodchcuk chuck if a woodchuck could chuck wood?
-                            </p>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
         <br>
-        <div class="bottom_nav">
+        <div class="bottom_navbar">
             <p> Instagram | Facebook | Number </p>
         </div>
     </div>
