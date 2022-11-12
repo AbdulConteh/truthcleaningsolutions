@@ -7,15 +7,15 @@
     <title>How We Clean</title>
     <style>
         .container {
-            width: 1800px;
-            height: 920px;
+            width: 100%;
+            height: max-content;
             margin: auto;
             background-color: whitesmoke;
         }
         .top_navbar {
             background-color: aliceblue;
             display: flex;
-            width: 100%;
+            width: 98%;
             height: 14%;
             flex-direction: row;
             align-items: center;
@@ -25,8 +25,35 @@
             padding: 10px;
             border: outset 5px;
         }
+        .cleaning_info_tab {
+            height: max-content;
+            width: 99%;
+            background-color: white;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .review_box {
+            display: flex;
+            height: 23%;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .cleaning_info_body {
+            display: flex;
+            border: outset 5px;
+            width: 75%;
+            height: 200px;
+            border-color: lightblue;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: black 1px 5px 8px 4px;
+        }
         .bottom_navbar {
-            height: 15%;
+            height: 10%;
             width: 100%;
             border: black solid 3px;
         }
@@ -39,8 +66,30 @@
             <p> <a href="/"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| <a href="/about"> About Us </a> (585) 434 - 8543 </p>
         </div>
         <br>
-        <div class="body_info">
+        <div class="cleaning_info_tab">
             <h2> How We Clean </h2>
+            <p class="cleaning_info_body"> Something good on our processes </p>
+            <br>
+            <p class="cleaning_info_body">
+                One thing we pride ourselves on is ensuring excellent quality cleans. We're pretty sure 
+                you don't want to come back to a house that smells like a chemical bomb was just let of! Neither do we! 
+                All of our cleaning equipment is derived from natural ingredients such as coconut, aloe vera, and oranges. 
+                This gives you the peace of mind knowing that you can breath easily while you clean up and have no harmful chemicals 
+                to worry about. To check out more about our cleaning equipment you can click<a href="https://www.amway.com/en_US/search/?text=L.O.C"> here. </a>
+            </p>
+            <br>
+            <div class="review_box">
+                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;">
+                    "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
+                    they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
+                    what I asked. I am super pleased and will defintiely be hiring them again. - Constance Qualls</p>
+                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;"> "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
+                    they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
+                    what I asked. I am super pleased and will defintiely be hiring them again." - Constance Qualls</p>
+                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;"> "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
+                    they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
+                    what I asked. I am super pleased and will defintiely be hiring them again." - Constance Qualls </p>
+            </div>
         </div>
         <br>
         <div class="bottom_navbar">
