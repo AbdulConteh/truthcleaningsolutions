@@ -16,3 +16,7 @@ def how_we_clean():
 @app.route("/services")
 def services():
     return render_template("our_services.html")
+
+@app.route("/specialty_cleans")
+def special_clean():
+    return render_template("specialty_clean.html")
