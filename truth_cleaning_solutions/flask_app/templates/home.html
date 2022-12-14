@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .container {
-            width: 1800px;
-            height: 920px;
+            width: 100%;
+            height: max-content;
             margin: auto;
             background-color: whitesmoke;
         }
         .top_navbar {
             background-color: aliceblue;
             display: flex;
-            width: 99%;
+            width: 98%;
             height: 14%;
             flex-direction: row;
             align-items: center;
@@ -23,6 +23,14 @@
             margin-top: 15px;
             padding: 10px;
             border: outset 5px;
+        }
+        .bottom_navbar {
+            height: 100px;
+            width: 100%;
+            font-size: larger;
+            border: black solid 3px;
+            display: flex;
+            align-items: center;
         }
         .home_body {
             width: 90%;
@@ -43,11 +51,6 @@
         tr:hover {background-color:lightblue}
         .tr2 {
             display: flex;
-        }
-        .bottom_navbar {
-            height: 10%;
-            width: 100%;
-            border: black outset 3px;
         }
         .contact {
             display:flex;
