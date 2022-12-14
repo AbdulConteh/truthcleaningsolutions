@@ -18,5 +18,9 @@ def services():
     return render_template("our_services.html")
 
 @app.route("/specialty_cleans")
-def special_clean():
+def special_cleans():
     return render_template("specialty_clean.html")
+
+@app.route("/career")
+def careers():
+    return render_template("career.html")

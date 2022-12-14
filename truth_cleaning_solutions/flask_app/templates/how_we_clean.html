@@ -36,16 +36,20 @@
             justify-content: space-between;
         }
         .review_box {
-            display: flex;
-            height: 23%;
             width: 100%;
-            justify-content: space-evenly;
+            font-style: oblique;
+            font-size: 25px;
+            display: flex;
+            height: fit-content;
+            box-shadow: 6px 2px 5px 2px;
             align-items: center;
         }
         .cleaning_info_body {
             display: flex;
             border: outset 5px;
             width: 75%;
+            font-size: x-large;
+            padding: 10px;
             height: 200px;
             border-color: lightblue;
             flex-direction: column;
@@ -53,9 +57,12 @@
             box-shadow: black 1px 5px 8px 4px;
         }
         .bottom_navbar {
-            height: 10%;
+            height: 100px;
             width: 100%;
+            font-size: larger;
             border: black solid 3px;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -65,38 +72,35 @@
             <img src="{{ url_for('static', filename='/imgs/logo.jpg') }}" alt="logo" style="width:150px; height: 100px;">
             <p> <a href="/"> Home </a>| <a href="/services"> Services We Offer </a>| <a href="/how_we_clean"> How We Clean </a>| <a href="/about"> About Us </a> (585) 434 - 8543 </p>
         </div>
-        <br>
         <div class="cleaning_info_tab">
-            <h2> How We Clean </h2>
+            <h2 style="font-size: 30px;"><strong> How We Clean</strong>  </h2>
             <p class="cleaning_info_body"> 
-                The founder Jennifer comes from 22 years in the cleaning and quality indstry. A major goal for her and the team is to change the 
-                way house cleaning is done. We will bring a mix of hospital and hotel experience to ensure your property is as clean as possible.
+                The founder, Jennifer, brings 22 years in the cleaning and quality indstry. Wanting to start a family busniess the 
+                goal for her and the team is to change the way house cleaning is done by changing the cleaning proceeses. We will 
+                bring a mix of hospital and hotel experience to ensure your property is as clean as possible.
             </p>
             <br>
             <p class="cleaning_info_body">
-                One thing we pride ourselves on is ensuring excellent quality cleans. We're pretty sure 
-                you don't want to come back to a house that smells like a chemical bomb was just let of! Neither do we! 
-                All of our cleaning equipment is derived from natural ingredients such as coconut, aloe vera, and oranges. 
-                This gives you the peace of mind knowing that you can breath easily while you clean up and have no harmful chemicals 
-                to worry about. To check out more about our cleaning equipment you can click<a href="https://www.amway.com/en_US/search/?text=L.O.C"> here. </a>
+                One thing we pride ourselves on is ensuring excellent quality cleans. Our cleaning offers products don't have harsh chemical smells.
+                We use hospital grade cleaning products that ensure a safe, and lasting clean that gives you the peace of mind knowing that you'll be breathing easily
+                after we leave your home!
             </p>
             <br>
             <div class="review_box">
                 <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;">
+                    "Very friendly, throuogh cleaning, very professional. Will be hiring again for future cleanings when needed. :)" - Allison Norsen</p>
+                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;">
                     "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
                     they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
                     what I asked. I am super pleased and will defintiely be hiring them again. - Constance Qualls</p>
-                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;"> "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
-                    they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
-                    what I asked. I am super pleased and will defintiely be hiring them again." - Constance Qualls</p>
-                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;"> "Jennifer and her helper were friendly and respectful. They went right to work, not wasting precious time;
-                    they were thorough, thoughful, and communicated very well. Even more importantly, they went above and beyond
-                    what I asked. I am super pleased and will defintiely be hiring them again." - Constance Qualls </p>
+                <p class="review" style="width: 33%;font-style: oblique;font-size: 21px;"> "Awesome! Above and beyond my expectations." - Lisa McKenzie </p>
             </div>
         </div>
         <br>
         <div class="bottom_navbar">
-            <p> Instagram | Facebook | Contact </p>
+            <div class="contact">
+                <p> <a href="https://www.instagram.com/thetruthcleaningsolutions/"> Instagram </a> | <a href="https://www.facebook.com/profile.php?id=100087073938157"> Facebook </a> | <a href="career.html"> Careers </a> | (585) 434 8543 </p>
+            </div>
         </div>
     </div>
 </body>
