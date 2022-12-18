@@ -1,5 +1,5 @@
 from flask_app import app
-from flask import render_template, request, redirect, session
+from flask import render_template, request
 
 @app.route("/")
 def home():
@@ -21,6 +21,3 @@ def services():
 def special_cleans():
     return render_template("specialty_clean.html")
 
-@app.route("/career")
-def careers():
-    return render_template("career.html")
